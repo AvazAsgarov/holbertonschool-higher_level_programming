@@ -15,3 +15,7 @@ class BaseGeometry:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
+    def __str__(self):
+        """Returns the string representation of BaseGeometry"""
+        return "[{}] {}".format(self.__class__.__name__, self.__dict__)
